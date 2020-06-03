@@ -20,12 +20,21 @@ namespace Maternidade_Escola_UFRJ_SAE
     public partial class Cabecalho : Window
     {
         public string TipoPaciente { get; set; }
-        public Cabecalho(string paciente)
+        public Cabecalho(string tipoPaciente)
         {
             InitializeComponent();
 
-            TipoPaciente = paciente;
-            Teste.Content = paciente;
+            TipoPaciente = tipoPaciente;
+        }
+
+        private void AbrirDiagnosticosEIntervencoes(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(
+                "Nome: "+Nome.Text+"\n"+
+                "Registro: "+Registro.Text+"\n"+
+                "Leito: "+Leito.Text+"\n"+
+                "Data: "+Data.SelectedDate+"\n"+
+                "Tipo: "+Tipo.Text);
         }
     }
 }

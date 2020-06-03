@@ -27,29 +27,28 @@ namespace Maternidade_Escola_UFRJ_SAE
 
         private void AbreCabecalho(object sender, RoutedEventArgs e)
         {
-            string paciente = "";
+            string tipoPaciente = "";
             if (Gestante.IsChecked == true)
             {
-                paciente = "gestante";
+                tipoPaciente = Gestante.Name;
             }
             else if (Puerpera.IsChecked == true)
             {
-                paciente = "puerpera";
+                tipoPaciente = Puerpera.Name;
             }
             else if (RecemNascido.IsChecked == true)
             {
-                paciente = RecemNascido.Name;
+                tipoPaciente = RecemNascido.Name;
             }
             else
             {
                 MessageBox.Show("Por favor, marque uma opção antes de prosseguir.");
             }
 
-            if (!string.IsNullOrEmpty(paciente))
+            if (!string.IsNullOrEmpty(tipoPaciente))
             {
-                Cabecalho cabecalho = new Cabecalho(paciente);
+                Cabecalho cabecalho = new Cabecalho(tipoPaciente);
                 cabecalho.Show();
-                this.Close();
             }
         }
     }
