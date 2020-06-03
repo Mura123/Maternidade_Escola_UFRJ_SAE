@@ -1,0 +1,32 @@
+﻿<Window x:Class="Maternidade_Escola_UFRJ_SAE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Maternidade_Escola_UFRJ_SAE"
+        mc:Ignorable="d"
+        Title="Maternidade Escola SAE" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Label Margin="10,55,10,10" Content="Selecione o tipo de prescrição:" FontSize="40"/>
+        <Viewbox Margin="30,0" Grid.Row="1" Height="200" Width="400" HorizontalAlignment="Left">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <RadioButton x:Name="Gestante" Margin="10,0,70,0" Content="Gestante" Grid.Row="0" GroupName="OpcoesPrescricao"/>
+                <RadioButton x:Name="Puerpera" Margin="10,0,70,0" Content="Puérpera" Grid.Row="1" GroupName="OpcoesPrescricao"/>
+                <RadioButton x:Name="RecemNascido" Margin="10,0,70,0" Content="Recém Nascido" Grid.Row="2" GroupName="OpcoesPrescricao"/>
+            </Grid>
+        </Viewbox>
+
+        <Button Margin="64,0,600,1" Height="40" Width="90" Content="Próximo" Grid.Row="2"
+                Click="AbreCabecalho"/>
+    </Grid>
+</Window>
