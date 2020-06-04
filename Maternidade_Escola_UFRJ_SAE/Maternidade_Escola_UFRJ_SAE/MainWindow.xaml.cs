@@ -47,7 +47,8 @@ namespace Maternidade_Escola_UFRJ_SAE
 
             if (!string.IsNullOrEmpty(tipoPaciente))
             {
-                Cabecalho cabecalho = new Cabecalho(tipoPaciente);
+                DataClass DadosForms = new DataClass(tipoPaciente);
+                Cabecalho cabecalho = new Cabecalho(DadosForms);
                 cabecalho.Show();
             }
         }

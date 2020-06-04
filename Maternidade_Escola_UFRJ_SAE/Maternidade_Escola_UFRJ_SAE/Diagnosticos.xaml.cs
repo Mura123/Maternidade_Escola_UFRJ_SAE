@@ -15,29 +15,19 @@ using System.Windows.Shapes;
 namespace Maternidade_Escola_UFRJ_SAE
 {
     /// <summary>
-    /// Lógica interna para Window1.xaml
+    /// Lógica interna para Diagnosticos.xaml
     /// </summary>
-    public partial class Cabecalho : Window
+    public partial class Diagnosticos : Window
     {
+
         public DataClass DadosForms { get; set; }
-        public Cabecalho(DataClass dadosForms)
+        public Diagnosticos(DataClass dadosForms)
         {
             InitializeComponent();
 
             DadosForms = dadosForms;
-        }
 
-        private void AbreDiagnosticos(object sender, RoutedEventArgs e)
-        {
-            DadosForms.Nome = Nome.Text;
-            DadosForms.Registro = Registro.Text;
-            DadosForms.Leito = Leito.Text;
-            DadosForms.Data = Data.SelectedDate;
-            DadosForms.Tipo = Tipo.Text;
-
-            Diagnosticos diag = new Diagnosticos(DadosForms);
-            diag.Show();
-            this.Close();
+            Teste.Content = DadosForms.Nome + " Registro: " + DadosForms.Registro +"\nTipo de Paciente: " + DadosForms.TipoPaciente;
         }
     }
 }
