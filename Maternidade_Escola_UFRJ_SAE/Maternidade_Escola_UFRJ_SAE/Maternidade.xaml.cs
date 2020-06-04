@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Maternidade_Escola_UFRJ_SAE.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,7 +45,6 @@ namespace Maternidade_Escola_UFRJ_SAE
             {
                 MessageBox.Show("Por favor, marque uma opção antes de prosseguir.");
             }
-
             if (!string.IsNullOrEmpty(tipoPaciente))
             {
                 DataClass DadosForms = new DataClass(tipoPaciente);

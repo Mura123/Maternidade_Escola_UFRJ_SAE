@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Maternidade_Escola_UFRJ_SAE
+namespace Maternidade_Escola_UFRJ_SAE.Modelo
 {
     public class DataClass
     {

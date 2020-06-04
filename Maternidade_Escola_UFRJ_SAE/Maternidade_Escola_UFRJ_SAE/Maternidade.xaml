@@ -20,8 +20,8 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <RadioButton x:Name="Gestante" Margin="10,0,70,0" Content="Gestante" Grid.Row="0" GroupName="OpcoesPrescricao"/>
-                <RadioButton x:Name="Puerpera" Margin="10,0,70,0" Content="Puérpera" Grid.Row="1" GroupName="OpcoesPrescricao"/>
+                <RadioButton x:Name="Gestante" Margin="10,0,70,5" Content="Gestante" Grid.Row="0" GroupName="OpcoesPrescricao"/>
+                <RadioButton x:Name="Puerpera" Margin="10,0,70,5" Content="Puérpera" Grid.Row="1" GroupName="OpcoesPrescricao"/>
                 <RadioButton x:Name="RecemNascido" Margin="10,0,70,0" Content="Recém Nascido" Grid.Row="2" GroupName="OpcoesPrescricao"/>
             </Grid>
         </Viewbox>
