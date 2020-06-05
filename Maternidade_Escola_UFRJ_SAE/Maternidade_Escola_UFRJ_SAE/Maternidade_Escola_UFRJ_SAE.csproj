@@ -58,7 +58,25 @@
     <Compile Include="Cabecalho.xaml.cs">
       <DependentUpon>Cabecalho.xaml</DependentUpon>
     </Compile>
-    <Page Include="Diagnosticos.xaml">
+    <Compile Include="DiagnosticosEIntervencoesGestante.xaml.cs">
+      <DependentUpon>DiagnosticosEIntervencoesGestante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosticosEIntervencoesPuerpera.xaml.cs">
+      <DependentUpon>DiagnosticosEIntervencoesPuerpera.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosticosEIntervencoesRecemNascido.xaml.cs">
+      <DependentUpon>DiagnosticosEIntervencoesRecemNascido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Servicos\JanelaServico.cs" />
+    <Page Include="DiagnosticosEIntervencoesGestante.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DiagnosticosEIntervencoesPuerpera.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DiagnosticosEIntervencoesRecemNascido.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -71,9 +89,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Modelo\DataClass.cs" />
-    <Compile Include="Diagnosticos.xaml.cs">
-      <DependentUpon>Diagnosticos.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Maternidade.xaml.cs">
       <DependentUpon>Maternidade.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -108,9 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Servicos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="Maternidade_Escola_UFRJ_SAE.DiagnosticosEIntervencoesPuerpera"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Maternidade_Escola_UFRJ_SAE"
+        mc:Ignorable="d"
+        Title="DiagnosticosEIntervencoesPuerpera" WindowState="Maximized">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Cólica uterina"></TabItem>
+            <TabItem Header="Característica do período pós-parto"></TabItem>
+            <TabItem Header="Falta de conhecimento sobre cuidados com o recém-nascido"></TabItem>
+            <TabItem Header="Fezes presente"></TabItem>
+            <TabItem Header="Ferida cirúrgica limpa (cesareana)"></TabItem>
+            <TabItem Header="Urina Normal"></TabItem>
+            <TabItem Header="Dor Aguda"></TabItem>
+            <TabItem Header="Pressão Sanguínea Elevada (hipertensão Crônica e Pré-eclampsia leve ou grave)"></TabItem>
+            <TabItem Header="Hiperglicemia"></TabItem>
+            <TabItem Header="Hipoglicemia"></TabItem>
+        </TabControl>
+    </Grid>
+</Window>

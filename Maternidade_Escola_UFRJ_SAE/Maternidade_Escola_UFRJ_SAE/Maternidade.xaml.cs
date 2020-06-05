@@ -1,4 +1,5 @@
 ﻿using Maternidade_Escola_UFRJ_SAE.Modelo;
+using Maternidade_Escola_UFRJ_SAE.Servicos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,8 +50,13 @@ namespace Maternidade_Escola_UFRJ_SAE
             {
                 DataClass DadosForms = new DataClass(tipoPaciente);
                 Cabecalho cabecalho = new Cabecalho(DadosForms);
-                cabecalho.Show();
+                JanelaServico.AbreJanela(cabecalho);
             }
+        }
+
+        private void JanelaPrincipalFechada(object sender, EventArgs e)
+        {
+            JanelaServico.FechaTudo();
         }
     }
 }

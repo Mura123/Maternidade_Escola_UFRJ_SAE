@@ -1,0 +1,90 @@
+﻿<Window x:Class="Maternidade_Escola_UFRJ_SAE.DiagnosticosEIntervencoesGestante"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Maternidade_Escola_UFRJ_SAE"
+        mc:Ignorable="d"
+        Title="DiagnosticosEIntervencoesGestante" WindowState="Maximized">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Cólica Uterina">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalAlignment="Center" Content="Intervenções de Enfermagem" FontWeight="Bold" Grid.Row="0" Grid.Column="1"/>
+                    <Label VerticalAlignment="Center" Content="Aprazamento" FontWeight="Bold" Grid.Row="0" Grid.Column="2"/>
+                    <CheckBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                    <Label VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Content="Orientar a permanência por cinco minutos sentada no leito antes de iniciar deambulação"/>
+                    <TextBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="2" Margin="0,5"/>
+                    <CheckBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+                    <Label VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Content="Supervisionar e ajudar na deambulação da cliente"/>
+                    <TextBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Margin="0,5"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Deambulação/Mobilidade Prejudicada">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="auto"/>
+                      <ColumnDefinition Width="auto"/>
+                      <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalAlignment="Center" Content="Intervenções de Enfermagem" FontWeight="Bold" Grid.Row="0" Grid.Column="1"/>
+                  <Label VerticalAlignment="Center" Content="Aprazamento" FontWeight="Bold" Grid.Row="0" Grid.Column="2"/>
+                  <CheckBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                  <Label VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Content="Orientar a permanência por cinco minutos sentada no leito antes de iniciar deambulação"/>
+                  <TextBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="2" Margin="0,5"/>
+                  <CheckBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+                  <Label VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Content="Supervisionar e ajudar na deambulação da cliente"/>
+                  <TextBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Margin="0,5"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Edema Periférico"></TabItem>
+            <TabItem Header="Sangramento Vaginal"></TabItem>
+            <TabItem Header="Fezes Presente Normal"></TabItem>
+            <TabItem Header="Gravidez"></TabItem>
+            <TabItem Header="Pressão Sanguínea Elevada (hipertensão Crônica e Pré-eclampsia leve ou grave)"></TabItem>
+            <TabItem Header="Urina Normal"></TabItem>
+            <TabItem Header="Vômito/Risco de Vômito"></TabItem>
+            <TabItem Header="Hiperglicemia"></TabItem>
+            <TabItem Header="Hipoglicemia"></TabItem>
+            <TabItem Header="Risco de Infecção (ruptura pematura de membranas ovulares) ">
+              <Grid>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="auto"/>
+                  <RowDefinition Height="auto"/>
+                  <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="auto"/>
+                  <ColumnDefinition Width="auto"/>
+                  <ColumnDefinition Width="auto"/>
+                  <ColumnDefinition Width="auto"/>
+                  <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Label VerticalAlignment="Center" Content="Intervenções de Enfermagem" FontWeight="Bold" Grid.Row="0" Grid.Column="1"/>
+                <Label VerticalAlignment="Center" Content="Aprazamento" FontWeight="Bold" Grid.Row="0" Grid.Column="2"/>
+                <CheckBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                <Label VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Content="Orientar a permanência por cinco minutos sentada no leito antes de iniciar deambulação"/>
+                <TextBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="2" Margin="0,5"/>
+                <CheckBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+                <Label VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Content="Supervisionar e ajudar na deambulação da cliente"/>
+                <TextBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Margin="0,5"/>
+              </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

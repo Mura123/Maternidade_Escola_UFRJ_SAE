@@ -16,19 +16,15 @@ using System.Windows.Shapes;
 namespace Maternidade_Escola_UFRJ_SAE
 {
     /// <summary>
-    /// Lógica interna para Diagnosticos.xaml
+    /// Lógica interna para DiagnosticosEIntervencoesRecemNascido.xaml
     /// </summary>
-    public partial class Diagnosticos : Window
+    public partial class DiagnosticosEIntervencoesRecemNascido : Window
     {
-
-        public DataClass DadosForms { get; set; }
-        public Diagnosticos(DataClass dadosForms)
+        private DataClass DadosForms { get; set; }
+        public DiagnosticosEIntervencoesRecemNascido(DataClass dataClass)
         {
             InitializeComponent();
-
-            DadosForms = dadosForms;
-
-            Teste.Content = DadosForms.Nome + " Registro: " + DadosForms.Registro +"\nTipo de Paciente: " + DadosForms.TipoPaciente;
+            DadosForms = dataClass;
         }
     }
 }
