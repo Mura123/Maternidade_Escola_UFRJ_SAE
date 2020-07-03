@@ -7,68 +7,37 @@
         mc:Ignorable="d"
         Title="DiagnosticosEIntervencoesPuerpera" Height="450" Width="800">
     <Grid>
-        <TabControl IsTabStop="True">
-            <TabItem Header="Cólica uterina">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Border BorderBrush="Black" BorderThickness="2" Grid.Row="0" HorizontalAlignment="Left">
-                        <Grid HorizontalAlignment="Center">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Content="Especificar:" Grid.Column="1"
-                                   Grid.ColumnSpan="2"/>
-                            <CheckBox Grid.Row="1" Grid.Column="0"
-                                      VerticalAlignment="Center"/>
-                            <Label Content="Leve" Grid.Row="1" 
-                                   Grid.Column="1" VerticalAlignment="Center"/>
-                            <CheckBox Grid.Row="1" Grid.Column="2"
-                                      VerticalAlignment="Center"/>
-                            <Label Content="Severa" Grid.Row="1" 
-                                   Grid.Column="3" VerticalAlignment="Center"/>
-                        </Grid>
-                    </Border>
-                    <Grid Grid.Row="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Label VerticalAlignment="Center" Content="Intervenções de Enfermagem" FontWeight="Bold" Grid.Row="0" Grid.Column="1"/>
-                        <Label VerticalAlignment="Center" Content="Aprazamento" FontWeight="Bold" Grid.Row="0" Grid.Column="2"/>
-                        <CheckBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
-                        <Label VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Content="Orientar a permanência por cinco minutos sentada no leito antes de iniciar deambulação"/>
-                        <TextBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="2" Margin="0,5"/>
-                        <CheckBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
-                        <Label VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Content="Supervisionar e ajudar na deambulação da cliente"/>
-                        <TextBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Margin="0,5"/>
-                    </Grid>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Característica do período pós-parto"></TabItem>
-            <TabItem Header="Falta de conhecimento sobre cuidados com o recém-nascido"></TabItem>
-            <TabItem Header="Fezes presente"></TabItem>
-            <TabItem Header="Ferida cirúrgica limpa (cesareana)"></TabItem>
-            <TabItem Header="Urina Normal"></TabItem>
-            <TabItem Header="Dor Aguda"></TabItem>
-            <TabItem Header="Pressão Sanguínea Elevada (hipertensão Crônica e Pré-eclampsia leve ou grave)"></TabItem>
-            <TabItem Header="Hiperglicemia"></TabItem>
-            <TabItem Header="Hipoglicemia"></TabItem>
-        </TabControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="Tipo" Margin="5">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+        </ComboBox>
+        <StackPanel Orientation="Horizontal" Grid.Column="1">
+            <Button Margin="5" Click="Add">
+                <Image Source="Recursos\Plus.png" Height="25"/>
+            </Button>
+            <Button Margin="5">
+                <Image Source="Recursos\Minus.png" Height="25"/>
+            </Button>
+        </StackPanel>
+        <ListView x:Name="Lista" Grid.Row="1" Grid.ColumnSpan="3">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Diagnostico" Width="75" DisplayMemberBinding="{Binding Tipo}"/>
+                    <GridViewColumn Header="Intervenções" Width="620" DisplayMemberBinding="{Binding IntevencoeseAprazamento.Keys}"/>
+                    <GridViewColumn Header="Aprazamento" Width="80"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 </Window>

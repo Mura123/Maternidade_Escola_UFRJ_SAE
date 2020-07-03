@@ -67,6 +67,7 @@
     <Compile Include="DiagnosticosEIntervencoesRecemNascido.xaml.cs">
       <DependentUpon>DiagnosticosEIntervencoesRecemNascido.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Diagnostico.cs" />
     <Compile Include="Servicos\JanelaServico.cs" />
     <Page Include="DiagnosticosEIntervencoesGestante.xaml">
       <SubType>Designer</SubType>
@@ -123,6 +124,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Recursos\Minus.png" />
+    <Resource Include="Recursos\Plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
