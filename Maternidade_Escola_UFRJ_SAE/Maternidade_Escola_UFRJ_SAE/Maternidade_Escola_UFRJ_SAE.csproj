@@ -58,6 +58,7 @@
     <Compile Include="Cabecalho.xaml.cs">
       <DependentUpon>Cabecalho.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Conversores\ListaParaStringConversor.cs" />
     <Compile Include="DiagnosticosEIntervencoesGestante.xaml.cs">
       <DependentUpon>DiagnosticosEIntervencoesGestante.xaml</DependentUpon>
     </Compile>
