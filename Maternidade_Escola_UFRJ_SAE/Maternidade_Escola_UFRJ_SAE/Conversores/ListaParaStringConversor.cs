@@ -26,7 +26,23 @@ namespace Maternidade_Escola_UFRJ_SAE.Conversores
                     }
                     else
                     {
-                        colecao += "," + aux;
+                        colecao += ", " + aux;
+                    }
+                }
+                return colecao;
+            }
+            if(value is ValueCollection valores)
+            {
+                foreach (var aux in valores)
+                {
+                    if (i == 0)
+                    {
+                        colecao += aux;
+                        i++;
+                    }
+                    else
+                    {
+                        colecao += ", " + aux;
                     }
                 }
                 return colecao;

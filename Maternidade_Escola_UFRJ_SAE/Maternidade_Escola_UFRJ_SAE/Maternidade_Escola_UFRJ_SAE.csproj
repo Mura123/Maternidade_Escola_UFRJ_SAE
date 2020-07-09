@@ -70,6 +70,7 @@
     </Compile>
     <Compile Include="Modelo\Diagnostico.cs" />
     <Compile Include="Servicos\JanelaServico.cs" />
+    <Compile Include="Servicos\MensagemServico.cs" />
     <Page Include="DiagnosticosEIntervencoesGestante.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -128,8 +129,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Resource Include="Recursos\Minus.png" />
-    <Resource Include="Recursos\Plus.png" />
+    <Resource Include="Recursos\Minus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Plus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Maternidade_Escola_UFRJ_SAE.Servicos;
 
 namespace Maternidade_Escola_UFRJ_SAE
 {
@@ -35,7 +35,23 @@ namespace Maternidade_Escola_UFRJ_SAE
 
         private void Add(object sender, RoutedEventArgs e)
         {
-            diags.Add(new Diagnostico { Tipo = Tipo.Text, IntevencoeseAprazamento = new Dictionary<string, string>() { { "1", "a" },{ "2", "b" } } });
+            diags.Add(new Diagnostico { Tipo = Tipo.Text});
+        }
+
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            if(Lista.SelectedItem!=null)
+            {
+                diags.Remove((Diagnostico)Lista.SelectedItem);
+            }
+        }
+
+        private void OpenDiagWindow(object sender, MouseButtonEventArgs e)
+        {
+            if(Lista.SelectedItems!=null && Lista.SelectedItems.Count!=0)
+            {
+                MensagemServico.MostraMensagem("Click duplo no" + ((Diagnostico)Lista.SelectedItem).Tipo);
+            }
         }
     }
 

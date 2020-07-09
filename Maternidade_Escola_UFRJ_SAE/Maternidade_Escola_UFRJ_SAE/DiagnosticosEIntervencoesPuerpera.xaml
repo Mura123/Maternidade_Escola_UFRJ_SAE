@@ -21,7 +21,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <ComboBox x:Name="Tipo" Margin="5">
-            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="1" IsSelected="True"/>
             <ComboBoxItem Content="2"/>
             <ComboBoxItem Content="3"/>
         </ComboBox>
@@ -29,16 +29,16 @@
             <Button Margin="5" Click="Add">
                 <Image Source="Recursos\Plus.png" Height="25"/>
             </Button>
-            <Button Margin="5">
+            <Button Margin="5" Click="Delete">
                 <Image Source="Recursos\Minus.png" Height="25"/>
             </Button>
         </StackPanel>
-        <ListView x:Name="Lista" Grid.Row="1" Grid.ColumnSpan="3">
+        <ListView x:Name="Lista" Grid.Row="1" Grid.ColumnSpan="3" MouseDoubleClick="OpenDiagWindow">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Diagnostico" Width="75" DisplayMemberBinding="{Binding Tipo}"/>
-                    <GridViewColumn Header="Intervenções" Width="620" DisplayMemberBinding="{Binding IntevencoeseAprazamento.Keys, Converter={StaticResource ListaPString}}"/>
-                    <GridViewColumn Header="Aprazamento" Width="80"/>
+                    <GridViewColumn Header="Intervenções" Width="350" DisplayMemberBinding="{Binding IntevencoeseAprazamento.Keys, Converter={StaticResource ListaPString}}"/>
+                    <GridViewColumn Header="Aprazamento" Width="350" DisplayMemberBinding="{Binding IntevencoeseAprazamento.Values, Converter={StaticResource ListaPString}}"/>
                 </GridView>
             </ListView.View>
         </ListView>
