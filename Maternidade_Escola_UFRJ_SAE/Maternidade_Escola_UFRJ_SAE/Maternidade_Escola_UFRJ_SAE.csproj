@@ -59,27 +59,13 @@
       <DependentUpon>Cabecalho.xaml</DependentUpon>
     </Compile>
     <Compile Include="Conversores\ListaParaStringConversor.cs" />
-    <Compile Include="DiagnosticosEIntervencoesGestante.xaml.cs">
-      <DependentUpon>DiagnosticosEIntervencoesGestante.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DiagnosticosEIntervencoesPuerpera.xaml.cs">
-      <DependentUpon>DiagnosticosEIntervencoesPuerpera.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DiagnosticosEIntervencoesRecemNascido.xaml.cs">
-      <DependentUpon>DiagnosticosEIntervencoesRecemNascido.xaml</DependentUpon>
+    <Compile Include="DiagnosticosEIntervencoes.xaml.cs">
+      <DependentUpon>DiagnosticosEIntervencoes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Diagnostico.cs" />
     <Compile Include="Servicos\JanelaServico.cs" />
     <Compile Include="Servicos\MensagemServico.cs" />
-    <Page Include="DiagnosticosEIntervencoesGestante.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DiagnosticosEIntervencoesPuerpera.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DiagnosticosEIntervencoesRecemNascido.xaml">
+    <Page Include="DiagnosticosEIntervencoes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

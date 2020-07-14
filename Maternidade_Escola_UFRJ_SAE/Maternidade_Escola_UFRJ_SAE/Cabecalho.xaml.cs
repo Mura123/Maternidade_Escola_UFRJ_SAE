@@ -36,22 +36,8 @@ namespace Maternidade_Escola_UFRJ_SAE
             DadosForms.Leito = Leito.Text;
             DadosForms.Data = Data.SelectedDate;
             DadosForms.Tipo = Tipo.Text;
-
-            if (DadosForms.TipoPaciente == "Gestante")
-            {
-                DiagnosticosEIntervencoesGestante diag = new DiagnosticosEIntervencoesGestante(DadosForms);
-                JanelaServico.AbreJanela(diag);
-            }
-            else if (DadosForms.TipoPaciente == "Puerpera")
-            {
-                DiagnosticosEIntervencoesPuerpera diag = new DiagnosticosEIntervencoesPuerpera(DadosForms);
-                JanelaServico.AbreJanela(diag);
-            }
-            else
-            {
-                DiagnosticosEIntervencoesRecemNascido diag = new DiagnosticosEIntervencoesRecemNascido(DadosForms);
-                JanelaServico.AbreJanela(diag);
-            }
+            DiagnosticosEIntervencoes diag = new DiagnosticosEIntervencoes(DadosForms);
+            JanelaServico.AbreJanela(diag);
             JanelaServico.FechaJanela(this);
         }
     }
