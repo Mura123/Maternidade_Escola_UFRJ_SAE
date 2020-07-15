@@ -65,7 +65,6 @@ namespace Maternidade_Escola_UFRJ_SAE
         #endregion
 
         private DataClass DadosForms { get; set; }
-        private DispatcherTimer dispatcherTimer;
         private ObservableCollection<Diagnostico> diags;
 
         public DiagnosticosEIntervencoes(DataClass dataClass)
@@ -90,16 +89,6 @@ namespace Maternidade_Escola_UFRJ_SAE
                 Tipo.ItemsSource = RN;
                 Tipo.SelectedIndex = 0;
             }
-            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
-            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            dispatcherTimer.Start();
-        }
-
-        private void dispatcherTimer_Tick(object sender, EventArgs e)
-        {
-
-            Lista.Items.Refresh();
         }
 
         private void Add(object sender, RoutedEventArgs e)
@@ -121,7 +110,8 @@ namespace Maternidade_Escola_UFRJ_SAE
             {
                 if (((Diagnostico)Lista.SelectedItem).Tipo == "Urina Normal" && (DadosForms.TipoPaciente=="Gestante"|| DadosForms.TipoPaciente == "Puerpera"))
                 {
-                    UrinaMae Janela = new UrinaMae((Diagnostico)Lista.SelectedItem);
+                    Action acao = new Action(()=> { Lista.Items.Refresh(); }) ;
+                    UrinaMae Janela = new UrinaMae((Diagnostico)Lista.SelectedItem, acao);
                     JanelaServico.AbreJanela(Janela);                    
                 }
             }

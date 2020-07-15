@@ -21,19 +21,21 @@ namespace Maternidade_Escola_UFRJ_SAE
     /// </summary>
     public partial class UrinaMae : Window
     {
+        Action Refresca;
         Diagnostico ajustes;
-        public UrinaMae(Diagnostico diagnosticos)
+        public UrinaMae(Diagnostico diagnosticos, Action acao)
         {
             InitializeComponent();
             ajustes = diagnosticos;
-            var Check = FindLogicalChildren<CheckBox>(this);
-            var Praz = FindLogicalChildren<TextBox>(this);
-            for (int i = 0; i < Check.Count(); i++)
+            Refresca = acao;
+            List<CheckBox> Check = FindLogicalChildren<CheckBox>(this).ToList();
+            List<TextBox> Praz = FindLogicalChildren<TextBox>(this).ToList();
+            for (int i = 0; i < Check.Count; i++)
             {
-                if (diagnosticos.IntevencoeseAprazamento.ContainsKey((string)Check.ElementAt(i).Content))
+                if (diagnosticos.IntevencoeseAprazamento.ContainsKey((string)Check[i].Content))
                 {
-                    Check.ElementAt(i).IsChecked = true;
-                    Praz.ElementAt(i).Text = diagnosticos.IntevencoeseAprazamento[(string)Check.ElementAt(i).Content];
+                    Check[i].IsChecked = true;
+                    Praz[i].Text = diagnosticos.IntevencoeseAprazamento[(string)Check[i].Content];
                 }
             }
         }
@@ -41,44 +43,29 @@ namespace Maternidade_Escola_UFRJ_SAE
         private void Confirmar(object sender, RoutedEventArgs e)
         {
 
-            var Check = FindLogicalChildren<CheckBox>(this);
-            var Praz = FindLogicalChildren<TextBox>(this);
-            for (int i = 0; i < Check.Count(); i++)
+            List<CheckBox> Check = FindLogicalChildren<CheckBox>(this).ToList();
+            List<TextBox> Praz = FindLogicalChildren<TextBox>(this).ToList();
+            for (int i = 0; i < Check.Count; i++)
             {
-                if (Check.ElementAt(i).IsChecked == true)
+                if (Check[i].IsChecked == true)
                 {
 
-                    if (!ajustes.IntevencoeseAprazamento.ContainsKey((string)Check.ElementAt(i).Content))
+                    if (!ajustes.IntevencoeseAprazamento.ContainsKey((string)Check[i].Content))
                     {
-                        ajustes.IntevencoeseAprazamento.Add((string)Check.ElementAt(i).Content, (string)Praz.ElementAt(i).Text);
+                        ajustes.IntevencoeseAprazamento.Add((string)Check[i].Content, (string)Praz[i].Text);
                     }
                     else
                     {
-                        ajustes.IntevencoeseAprazamento[(string)Check.ElementAt(i).Content] = (string)Praz.ElementAt(i).Text;
+                        ajustes.IntevencoeseAprazamento[(string)Check[i].Content] = (string)Praz[i].Text;
                     }
                 }
             }
+            Refresca.Invoke();
         }
 
         private void ConfirmareFechar(object sender, RoutedEventArgs e)
         {
-            var Check = FindLogicalChildren<CheckBox>(this);
-            var Praz = FindLogicalChildren<TextBox>(this);
-            for (int i = 0; i < Check.Count(); i++)
-            {
-                if (Check.ElementAt(i).IsChecked == true)
-                {
-
-                    if (!ajustes.IntevencoeseAprazamento.ContainsKey((string)Check.ElementAt(i).Content))
-                    {
-                        ajustes.IntevencoeseAprazamento.Add((string)Check.ElementAt(i).Content, (string)Praz.ElementAt(i).Text);
-                    }
-                    else
-                    {
-                        ajustes.IntevencoeseAprazamento[(string)Check.ElementAt(i).Content] = (string)Praz.ElementAt(i).Text;
-                    }
-                }
-            }
+            Confirmar(sender, e);
             JanelaServico.FechaJanela(this);
         }
 
@@ -99,8 +86,6 @@ namespace Maternidade_Escola_UFRJ_SAE
                     }
                 }
             }
-        }
-
-        
+        }        
     }
 }
