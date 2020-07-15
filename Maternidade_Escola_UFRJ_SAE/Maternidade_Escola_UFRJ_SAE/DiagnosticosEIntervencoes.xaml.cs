@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Maternidade_Escola_UFRJ_SAE.Servicos;
+using System.Windows.Threading;
 
 namespace Maternidade_Escola_UFRJ_SAE
 {
@@ -64,6 +65,7 @@ namespace Maternidade_Escola_UFRJ_SAE
         #endregion
 
         private DataClass DadosForms { get; set; }
+        private DispatcherTimer dispatcherTimer;
         private ObservableCollection<Diagnostico> diags;
 
         public DiagnosticosEIntervencoes(DataClass dataClass)
@@ -88,11 +90,21 @@ namespace Maternidade_Escola_UFRJ_SAE
                 Tipo.ItemsSource = RN;
                 Tipo.SelectedIndex = 0;
             }
+            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+        }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+
+            Lista.Items.Refresh();
         }
 
         private void Add(object sender, RoutedEventArgs e)
         {
-            diags.Add(new Diagnostico { Tipo = Tipo.Text });
+            diags.Add(new Diagnostico { Tipo = Tipo.Text, IntevencoeseAprazamento = new Dictionary<string, string>() });
         }
 
         private void Delete(object sender, RoutedEventArgs e)
@@ -110,9 +122,14 @@ namespace Maternidade_Escola_UFRJ_SAE
                 if (((Diagnostico)Lista.SelectedItem).Tipo == "Urina Normal" && (DadosForms.TipoPaciente=="Gestante"|| DadosForms.TipoPaciente == "Puerpera"))
                 {
                     UrinaMae Janela = new UrinaMae((Diagnostico)Lista.SelectedItem);
-                    JanelaServico.AbreJanela(Janela);
+                    JanelaServico.AbreJanela(Janela);                    
                 }
             }
+        }
+
+        private void Recarrega(object sender, RoutedEventArgs e)
+        {
+            Lista.Items.Refresh();
         }
     }
 
