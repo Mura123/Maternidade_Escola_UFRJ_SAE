@@ -65,6 +65,9 @@
     <Compile Include="Modelo\Diagnostico.cs" />
     <Compile Include="Servicos\JanelaServico.cs" />
     <Compile Include="Servicos\MensagemServico.cs" />
+    <Compile Include="UrinaMae.xaml.cs">
+      <DependentUpon>UrinaMae.xaml</DependentUpon>
+    </Compile>
     <Page Include="DiagnosticosEIntervencoes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -83,6 +86,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Cabecalho.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UrinaMae.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

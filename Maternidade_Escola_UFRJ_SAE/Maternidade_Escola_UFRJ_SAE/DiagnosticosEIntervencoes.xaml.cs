@@ -107,7 +107,11 @@ namespace Maternidade_Escola_UFRJ_SAE
         {
             if (Lista.SelectedItems != null && Lista.SelectedItems.Count != 0)
             {
-                MensagemServico.MostraMensagem("Click duplo no" + ((Diagnostico)Lista.SelectedItem).Tipo);
+                if (((Diagnostico)Lista.SelectedItem).Tipo == "Urina Normal" && (DadosForms.TipoPaciente=="Gestante"|| DadosForms.TipoPaciente == "Puerpera"))
+                {
+                    UrinaMae Janela = new UrinaMae((Diagnostico)Lista.SelectedItem);
+                    JanelaServico.AbreJanela(Janela);
+                }
             }
         }
     }
