@@ -59,6 +59,13 @@ namespace Maternidade_Escola_UFRJ_SAE
                         ajustes.IntevencoeseAprazamento[(string)Check[i].Content] = (string)Praz[i].Text;
                     }
                 }
+                else
+                {
+                    if (ajustes.IntevencoeseAprazamento.ContainsKey((string)Check[i].Content))
+                    {
+                        ajustes.IntevencoeseAprazamento.Remove((string)Check[i].Content);
+                    }
+                }
             }
             Refresca.Invoke();
         }
@@ -86,6 +93,6 @@ namespace Maternidade_Escola_UFRJ_SAE
                     }
                 }
             }
-        }        
+        }
     }
 }

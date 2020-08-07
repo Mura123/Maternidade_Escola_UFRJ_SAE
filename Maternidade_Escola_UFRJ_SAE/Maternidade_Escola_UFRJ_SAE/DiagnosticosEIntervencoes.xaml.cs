@@ -64,6 +64,7 @@ namespace Maternidade_Escola_UFRJ_SAE
         };
         #endregion
 
+
         private DataClass DadosForms { get; set; }
         private ObservableCollection<Diagnostico> diags;
 
@@ -77,18 +78,16 @@ namespace Maternidade_Escola_UFRJ_SAE
             if (dataClass.TipoPaciente == "Gestante")
             {
                 Tipo.ItemsSource = Gestante;
-                Tipo.SelectedIndex = 0;
             }
             if (dataClass.TipoPaciente == "Puerpera")
             {
                 Tipo.ItemsSource = Puerpera;
-                Tipo.SelectedIndex = 0;
             }
             if (dataClass.TipoPaciente == "RecemNascido")
             {
                 Tipo.ItemsSource = RN;
-                Tipo.SelectedIndex = 0;
             }
+            Tipo.SelectedIndex = 0;
         }
 
         private void Add(object sender, RoutedEventArgs e)
@@ -115,11 +114,6 @@ namespace Maternidade_Escola_UFRJ_SAE
                     JanelaServico.AbreJanela(Janela);                    
                 }
             }
-        }
-
-        private void Recarrega(object sender, RoutedEventArgs e)
-        {
-            Lista.Items.Refresh();
         }
     }
 
