@@ -6,7 +6,7 @@
         xmlns:c="clr-namespace:Maternidade_Escola_UFRJ_SAE.Conversores"
         xmlns:local="clr-namespace:Maternidade_Escola_UFRJ_SAE"
         mc:Ignorable="d"
-        Title="Diagnosticos E Intervençoes" Height="450" Width="800">
+        Title="Diagnosticos e Intervençoes de Enfermagem" Height="450" Width="800">
     <Window.Resources>
         <c:ListaParaStringConversor x:Key="ListaPString"/>
     </Window.Resources>
@@ -32,8 +32,8 @@
         <ListView x:Name="Lista" Grid.Row="1" Grid.ColumnSpan="3" MouseDoubleClick="OpenDiagWindow">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Diagnostico"  Width="auto" DisplayMemberBinding="{Binding Tipo}"/>
-                    <GridViewColumn Header="Intervenções" Width="auto" DisplayMemberBinding="{Binding IntevencoeseAprazamento.Keys, Converter={StaticResource ListaPString}}"/>
+                    <GridViewColumn Header="Diagnosticos de Enfermagem"  Width="auto" DisplayMemberBinding="{Binding Tipo}"/>
+                    <GridViewColumn Header="Intervenções de Enfermagem" Width="auto" DisplayMemberBinding="{Binding IntevencoeseAprazamento.Keys, Converter={StaticResource ListaPString}}"/>
                     <GridViewColumn Header="Aprazamento" Width="auto" DisplayMemberBinding="{Binding IntevencoeseAprazamento.Values, Converter={StaticResource ListaPString}}"/>
                 </GridView>
             </ListView.View>

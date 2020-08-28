@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Maternidade_Escola_UFRJ_SAE"
         mc:Ignorable="d"
-        Title="Maternidade Escola SAE" Height="450" Width="800" Closed="JanelaPrincipalFechada">
+        Title="Maternidade Escola - Sistematização da Assistência de Enfermagem" Height="450" Width="800" Closed="JanelaPrincipalFechada">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

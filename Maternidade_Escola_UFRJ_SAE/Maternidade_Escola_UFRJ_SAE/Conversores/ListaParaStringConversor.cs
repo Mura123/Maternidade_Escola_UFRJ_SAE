@@ -26,7 +26,7 @@ namespace Maternidade_Escola_UFRJ_SAE.Conversores
                     }
                     else
                     {
-                        colecao += ", " + aux;
+                        colecao += Environment.NewLine + aux;
                     }
                 }
                 return colecao;
@@ -42,7 +42,7 @@ namespace Maternidade_Escola_UFRJ_SAE.Conversores
                     }
                     else
                     {
-                        colecao += ", " + aux;
+                        colecao += Environment.NewLine + aux;
                     }
                 }
                 return colecao;
