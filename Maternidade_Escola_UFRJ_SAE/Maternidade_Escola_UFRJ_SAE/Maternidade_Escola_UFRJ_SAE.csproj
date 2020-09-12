@@ -62,6 +62,9 @@
     <Compile Include="DiagnosticosEIntervencoes.xaml.cs">
       <DependentUpon>DiagnosticosEIntervencoes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Diagnosticos\ColicaGestante.xaml.cs">
+      <DependentUpon>ColicaGestante.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Diagnostico.cs" />
     <Compile Include="Servicos\JanelaServico.cs" />
     <Compile Include="Servicos\MensagemServico.cs" />
@@ -69,6 +72,10 @@
       <DependentUpon>UrinaMae.xaml</DependentUpon>
     </Compile>
     <Page Include="DiagnosticosEIntervencoes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Diagnosticos\ColicaGestante.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

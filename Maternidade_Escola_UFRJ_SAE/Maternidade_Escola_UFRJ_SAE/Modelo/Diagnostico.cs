@@ -11,5 +11,7 @@ namespace Maternidade_Escola_UFRJ_SAE.Modelo
         public string Tipo { get; set; }
 
         public Dictionary<string,string> IntevencoeseAprazamento { get; set;}
+
+        public string Especificacoes { get; set; }
     }
 }
