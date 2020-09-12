@@ -28,13 +28,14 @@
             <Button Margin="5" Click="Delete">
                 <Image Source="Recursos\Minus.png" Height="25"/>
             </Button>
+            <Button Margin="5" Click="Imprime" Content="Imprime"/>
         </StackPanel>
         <ListView x:Name="Lista" Grid.Row="1" Grid.ColumnSpan="3" MouseDoubleClick="OpenDiagWindow">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Diagnosticos de Enfermagem"  Width="auto" DisplayMemberBinding="{Binding Tipo}"/>
-                    <GridViewColumn Header="Intervenções de Enfermagem" Width="auto" DisplayMemberBinding="{Binding IntevencoeseAprazamento.Keys, Converter={StaticResource ListaPString}}"/>
-                    <GridViewColumn Header="Aprazamento" Width="auto" DisplayMemberBinding="{Binding IntevencoeseAprazamento.Values, Converter={StaticResource ListaPString}}"/>
+                    <GridViewColumn Header="Intervenções de Enfermagem" Width="530" DisplayMemberBinding="{Binding IntevencoeseAprazamento.Keys, Converter={StaticResource ListaPString}}"/>
+                    <GridViewColumn Header="Aprazamento" Width="85" DisplayMemberBinding="{Binding IntevencoeseAprazamento.Values, Converter={StaticResource ListaPString}}"/>
                 </GridView>
             </ListView.View>
         </ListView>

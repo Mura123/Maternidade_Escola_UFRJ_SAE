@@ -115,6 +115,11 @@ namespace Maternidade_Escola_UFRJ_SAE
                 }
             }
         }
+
+        private void Imprime(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }
