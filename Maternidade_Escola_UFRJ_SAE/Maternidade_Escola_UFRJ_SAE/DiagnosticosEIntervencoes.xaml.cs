@@ -92,7 +92,7 @@ namespace Maternidade_Escola_UFRJ_SAE
 
         private void Add(object sender, RoutedEventArgs e)
         {
-            diags.Add(new Diagnostico { Tipo = Tipo.Text, IntevencoeseAprazamento = new Dictionary<string, string>(), Especificacoes="" });
+            diags.Add(new Diagnostico { Tipo = Tipo.Text, IntevencoeseAprazamento = new Dictionary<string, string>(), Especificacoes="", EspecificacoesTextuais= new Dictionary<string, string>() });
         }
 
         private void Delete(object sender, RoutedEventArgs e)
@@ -117,6 +117,18 @@ namespace Maternidade_Escola_UFRJ_SAE
                 {
                     Action acao = new Action(() => { Lista.Items.Refresh(); });
                     ColicaGestante Janela = new ColicaGestante((Diagnostico)Lista.SelectedItem, acao);
+                    JanelaServico.AbreJanela(Janela);
+                }
+                if (((Diagnostico)Lista.SelectedItem).Tipo == "Edema Periférico" && (DadosForms.TipoPaciente == "Gestante"))
+                {
+                    Action acao = new Action(() => { Lista.Items.Refresh(); });
+                    EdemaGestante Janela = new EdemaGestante((Diagnostico)Lista.SelectedItem, acao);
+                    JanelaServico.AbreJanela(Janela);
+                }
+                if (((Diagnostico)Lista.SelectedItem).Tipo == "Gravidez" && (DadosForms.TipoPaciente == "Gestante"))
+                {
+                    Action acao = new Action(() => { Lista.Items.Refresh(); });
+                    GravidezGestante Janela = new GravidezGestante((Diagnostico)Lista.SelectedItem, acao);
                     JanelaServico.AbreJanela(Janela);
                 }
             }

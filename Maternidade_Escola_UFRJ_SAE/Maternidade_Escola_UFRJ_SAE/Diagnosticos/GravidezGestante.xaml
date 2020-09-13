@@ -1,11 +1,11 @@
-﻿<Window x:Class="Maternidade_Escola_UFRJ_SAE.ColicaGestante"
+﻿<Window x:Class="Maternidade_Escola_UFRJ_SAE.GravidezGestante"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Maternidade_Escola_UFRJ_SAE"
         mc:Ignorable="d"
-        Title="Cólica Uterina" Height="450" Width="800">
+        Title="Gravidez" Height="450" Width="820">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -23,30 +23,31 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <Label  Content="Especificar:"/>
-        <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <RadioButton x:Name="Leve" GroupName="Intensidade" Margin="5" Content="Leve"/>
-            <RadioButton x:Name="Severa" GroupName="Intensidade" Margin="5" Content="Severa"/>
-        </StackPanel>
-        <Label Content="Intervenções de Enfermagem" Grid.Row="2" Grid.Column="0"/>
-        <Label Content="Aprazamento" Grid.Row="2" Grid.Column="1"/>
+        <Label Content="Intervenções de Enfermagem" Grid.Column="0"/>
+        <Label Content="Aprazamento" Grid.Column="1"/>
+        <CheckBox Margin="5" Grid.Row="1" 
+                  Content="Avaliar dinâmica uterina"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="5"/>
+        <CheckBox Margin="5" Grid.Row="2" 
+                  Content="Auscultar BCF e medir a altura uterina "/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5"/>
         <CheckBox Margin="5" Grid.Row="3" 
-                  Content="Avaliar a cólica quanto à localização,frequência e duração"/>
+                  Content="Realizar manobras de Leopold (avaliar situção fetal)"/>
         <TextBox Grid.Row="3" Grid.Column="1" Margin="5"/>
-        <CheckBox Margin="5" Grid.Row="4"
-                  Content="Ensinar medidas não farmacológicas para alívio/contole da dor "/>
+        <CheckBox Margin="5" Grid.Row="4" 
+                  Content="Obter dados sobre idade gestacional"/>
         <TextBox Grid.Row="4" Grid.Column="1" Margin="5"/>
-        <CheckBox Margin="5" Grid.Row="5"
-                  Content="Oferecer informações sobre as causas da cólica"/>
+        <CheckBox Margin="5" Grid.Row="5" 
+                  Content="Realizar exame físico"/>
         <TextBox Grid.Row="5" Grid.Column="1" Margin="5"/>
-        <CheckBox Margin="5" Grid.Row="6"
-                  Content="Avaliar a eficácia da medicação, após sua administração"/>
+        <CheckBox Margin="5" Grid.Row="6" 
+                  Content="Discutir mudanças normais na anatomia e fisiologia durante a gravidez"/>
         <TextBox Grid.Row="6" Grid.Column="1" Margin="5"/>
-        <CheckBox Margin="5" Grid.Row="7"
-                  Content="Estimular a verbalização da dor"/>
+        <CheckBox Margin="5" Grid.Row="7" VerticalContentAlignment="Center"
+                  Content="Discutir sinais de problemas (como sangramentos) e a importância de avisar sobre quando isto ocorrer para providenciar cuidados"/>
         <TextBox Grid.Row="7" Grid.Column="1" Margin="5"/>
         <CheckBox Margin="5" Grid.Row="8"
-                  Content="Observar e registrar presença de sangramento"/>
+                  Content="Transferir a paciente"/>
         <TextBox Grid.Row="8" Grid.Column="1" Margin="5"/>
         <Grid Grid.Row="9">
             <Grid.ColumnDefinitions>
