@@ -1,0 +1,39 @@
+﻿<Window x:Class="Maternidade_Escola_UFRJ_SAE.Deambulação_prejudicada_Mobilidade_física_prejudicada"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Maternidade_Escola_UFRJ_SAE"
+        mc:Ignorable="d"
+        Title="Deambulação Prejudicada / Mobilidade Física Prejudicada" Height="200" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Intervenções de Enfermagem" Grid.Column="0"/>
+        <Label Content="Aprazamento" Grid.Column="1"/>
+        <CheckBox Margin="5" Grid.Row="1" 
+                  Content="Orientar a permanência por cinco minutos sentada no leito antes de iniciar deambulação"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="5"/>
+        <CheckBox Margin="5" Grid.Row="2"
+                  Content="Supervisionar e ajudar na deambulação da cliente"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5"/>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Confirmar" Margin="5"
+                Click="Confirmar"/>
+            <Button Content="Confirmar e Fechar" Margin="5" Grid.Column="1"
+                Click="ConfirmareFechar"/>
+        </Grid>
+    </Grid>
+</Window>
