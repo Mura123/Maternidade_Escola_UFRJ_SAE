@@ -68,6 +68,18 @@
     <Compile Include="Diagnosticos\Deambulação prejudicada_Mobilidade física prejudicada.xaml.cs">
       <DependentUpon>Deambulação prejudicada_Mobilidade física prejudicada.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Diagnosticos\EdemaGestante.xaml.cs">
+      <DependentUpon>EdemaGestante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnosticos\FezesPresenteNormalGestante.xaml.cs">
+      <DependentUpon>FezesPresenteNormalGestante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnosticos\GravidezGestante.xaml.cs">
+      <DependentUpon>GravidezGestante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnosticos\SangramentoVaginalGestante.xaml.cs">
+      <DependentUpon>SangramentoVaginalGestante.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Diagnostico.cs" />
     <Compile Include="Servicos\JanelaServico.cs" />
     <Compile Include="Servicos\MensagemServico.cs" />
@@ -85,6 +97,22 @@
     <Page Include="Diagnosticos\Deambulação prejudicada_Mobilidade física prejudicada.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Diagnosticos\EdemaGestante.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Diagnosticos\FezesPresenteNormalGestante.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Diagnosticos\GravidezGestante.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Diagnosticos\SangramentoVaginalGestante.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Maternidade.xaml">
       <Generator>MSBuild:Compile</Generator>
